@@ -45,7 +45,7 @@ EOF
 sudo ssserver -c /etc/shadowsocks.json -d start
 
 wget https://git.io/vpnsetup -O vpnsetup.sh
-sudo VPN_IPSEC_PSK=$L2TP_PSK VPN_USER=$L2TP_USERNAME VPN_PASSWORD=$L2TP_PASSWORD sh vpnsetup.sh
+sudo VPN_IPSEC_PSK=L2TP_PSK VPN_USER=L2TP_USERNAME VPN_PASSWORD=L2TP_PASSWORD sh vpnsetup.sh
 
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
